@@ -1,0 +1,1 @@
+a two dimensional array also known as a matrix is a type of data structure that stores elements in a grid format with rows and columns. Each element in a two-dimensional array is accessed by its rows and column indices

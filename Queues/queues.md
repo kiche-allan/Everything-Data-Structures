@@ -1,0 +1,5 @@
+<!-- A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. This means that the first element that is added to the queue will be the first one to be removed. The elements are added to the "rear" of the queue, and removed from the "front" of the queue.
+
+Queues are commonly used to represent a waiting line or buffer, where elements are added to the end of the queue and removed from the front. This makes it useful in situations where you need to handle multiple tasks in a specific order, such as processing tasks in a printer queue or handling requests in a web server.
+
+Queues can be implemented in various ways, including arrays, linked lists, and more. The basic operations that are performed on queues include enqueue (adding an element to the rear of the queue), dequeue (removing an element from the front of the queue), and peek (retrieving the front element without removing it). -->
