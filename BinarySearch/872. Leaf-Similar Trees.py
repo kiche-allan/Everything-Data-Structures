@@ -5,7 +5,7 @@
 
 # Return true if and only if the two given trees with head nodes root1 and root2 are leaf-similar.
 
- class Solution:
+class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         def constructLeaves(root):
             arr = []
