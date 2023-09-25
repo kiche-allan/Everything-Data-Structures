@@ -25,3 +25,7 @@ class Solution:
 # Finally, there is another conditional check (return -1 if neg % 2 else 1) outside the loop. This check is also a constant time operation since it doesn't depend on the size of the input list.
 
 # Therefore, the overall time complexity of the arraySign method is O(n), where n is the number of elements in the nums list.
+# Space Complexity:
+
+# The code uses a single integer variable neg to keep track of the count of negative numbers encountered in the input list. This variable occupies a constant amount of space, regardless of the size of the input list. Thus, the space complexity is O(1), which means it has constant space complexity.
+# In summary, the code has a time complexity of O(n) and a space complexity of O(1), where n is the number of elements in the nums list. It is efficient in terms of both time and space complexity.
