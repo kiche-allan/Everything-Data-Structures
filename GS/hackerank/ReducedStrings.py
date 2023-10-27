@@ -9,3 +9,16 @@
 
 
 # Remove the two 'b' characters leaving 'aa'. Remove the two 'a' characters to leave ''. Return 'Empty String'.
+
+def superReducedString(s):
+    # Write your code here
+    stack = []
+    for char in s:
+        if stack and stack[-1] == char:
+            stack.pop()
+        else:
+            stack.append(char)
+    if not stack:
+        return "Empty String"
+    else:
+        return ''.join(stack)
