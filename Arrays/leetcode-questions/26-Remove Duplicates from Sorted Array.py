@@ -32,7 +32,7 @@ class Solution:
         if not nums:
             return 0
         
-        #initialize the two pointers, l and where l points to the last unique element and r iterates through the array
+        #initialize the two pointers, l and r and where l points to the last unique element and r iterates through the array
         
         l = 0
         
