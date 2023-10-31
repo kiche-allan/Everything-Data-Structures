@@ -1,27 +1,22 @@
 def plusMinus(arr):
     # Write your code here
-    #initialize counters for positive, negative and zero
-    pc = 0 #positive count
-    nc =0  #negative count
-    zc =0  #zero count
-    
-    #iterate through the array and count the elements
+    n = len(arr)
+    positive_count = negative_count = zero_count = 0
+
     for num in arr:
         if num > 0:
-            pc += 1
+            positive_count += 1
         elif num < 0:
-            nc += 0
+            negative_count += 1
         else:
-            zc += 1
-            
-#calculate the ratios
- #pr = positive ratio
- #nr = negative ratio
- #zr = zero ratio
-    tc = len(arr)
-    pr = pc/ tc
-    nr = nc/tc
-    zr = zc/tc
-    
-    return pr, nr, zr
-                 
+            zero_count += 1
+
+    # Calculate the ratios
+    positive_ratio = positive_count / n
+    negative_ratio = negative_count / n
+    zero_ratio = zero_count / n
+
+    # Print the ratios with 6 decimal places
+    print(f"{positive_ratio:.6f}")
+    print(f"{negative_ratio:.6f}")
+    print(f"{zero_ratio:.6f}")

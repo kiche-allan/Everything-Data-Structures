@@ -33,6 +33,7 @@ def makeAnagram(a, b):
     #count the character frequencies in a string
     for char in a:
         char_count_a[char] = char_count_a.get(char, 0) + 1
+        # So, this line essentially counts the frequency of each character in the string a and updates the char_count_a dictionary accordingly. It's a common technique used for counting character frequencies in a string.
         
     #count character frrequencies in string b
     for char in b:
