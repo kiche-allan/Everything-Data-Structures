@@ -6,7 +6,7 @@
 
 # You must write a solution in O(log(m * n)) time complexity.
 
- class Solution:
+class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         ROWS, COLS = len(matrix), len(matrix[0])
 
