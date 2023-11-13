@@ -3,14 +3,15 @@
 #  with the largest sum, and return its sum.
 
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        maxSub =  nums[0]
-        currentSum = 0
-        for num in nums : #0(n) - time 
-            if currentSum < 0:
-                currentSum = 0
-            currentSum  += num
-            maxSub = max(maxSub, currentSum)
+    def maxSubArray(self, nums: List([int])) -> int:
+        maxSub = nums[0]
+        curSum = 0
+
+        for n in nums:
+            if curSum < 0:
+                curSum = 0
+            curSum += n
+        maxSub = max(maxSub, curSum)
         return maxSub
         #0(1) space complexity
         
