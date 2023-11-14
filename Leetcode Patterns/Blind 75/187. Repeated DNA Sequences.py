@@ -15,5 +15,7 @@ class Solution:
                 res.add(cur)
             seen.add(cur)
         return list(res)
+    
+# Two sets, seen and res, are initialized. seen is used to keep track of the DNA sequences encountered during the iteration, and res will store the repeated sequences.
 
         
