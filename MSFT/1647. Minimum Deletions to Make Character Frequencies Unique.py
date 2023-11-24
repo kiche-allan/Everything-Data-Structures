@@ -4,4 +4,15 @@
 
 # The frequency of a character in a string is the number of times it appears in the string. For example, in the string "aab", the frequency of 'a' is 2, while the frequency of 'b' is 1.
 
- 
+class Solution:
+    def minDeletions(self, s: str) -> int:
+        count = collections.Counter(s)
+        used_freq = set()
+        res = 0
+
+        for c, freq in count.items():
+            while freq>0 and freq in used_freq:
+                freq -= 1
+                res += 1
+            used_freq.add(freq) 
+        return res
