@@ -85,3 +85,38 @@
 # 1,0,0
 # 0,1,0
 # By selecting movies 1 and 3 to fill the 2 slots, all 3 genres are covered. Thus, satisfying all viewers.
+
+class Solution:
+    def maximizewatchedshows(self, A, Y, Z):
+        if not A:
+            return False
+        M = len(A) // Y   #calculate the number of movies
+        visited = [0] * M #keep track of whether a movie is selected or not
+
+        def backtrack(slot_count, genre_covered):
+            #base case : If all slots are filled and all geners are covered, return True
+            if slow_count == Z and genre_covered == Y:
+                return True
+            
+            #if we cant fill all slots, return False
+            if slot_count == Z:
+                return False
+            for i in range(M):
+                if not visited[i]:
+                    visited[i] = 1  #mark movie as selectted
+
+
+                    #update the gener_covered based on the geners of the selected move
+                    for j in range(Y):
+                        genre_covered += A[i * Y + j]
+
+                        #recursively check thr next slot with updated values
+                        if backtrack(slot_count + 1, genre_covered):
+                            return True
+                        
+                        #backtrack unmark the movie and update the genre_covered
+                        visited[i] = 0
+                        for j in range(Y):
+                            genre_covered -= A[i * Y + j]
+                    return False
+        return bacltrack(0, 0)
