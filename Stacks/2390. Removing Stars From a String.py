@@ -11,3 +11,15 @@
 # The input will be generated such that the operation is always possible.
 # It can be shown that the resulting string will always be unique.
 
+class Solution:
+    def removeStars(self, s:str) -> str:
+        stack = []
+        for char in s:
+            if char != "*":
+                stack.append(char)
+            else:
+                if stack:
+                    stack.pop()
+        return ''.join(stack)
+
+
