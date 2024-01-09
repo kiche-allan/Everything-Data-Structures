@@ -4,7 +4,7 @@ class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
             return head
-
+        #Initializes a pointer current to the head of the linked list. This pointer will be used to traverse the linked list.
         current = head
         while current.next:
             if current.val == current.next.val:
