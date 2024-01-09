@@ -19,8 +19,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
         if l1.val < l2.val:
             #add the current node of the first list to the new list
             tail.next = l1
-            #move the pointer to the tail of the new list to the next node
-            tail = l1
+            
             #move the pointer of the first of the first list to the next nosde
             l1 = l1.next
         else:
